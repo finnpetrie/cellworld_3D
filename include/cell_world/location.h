@@ -4,8 +4,8 @@
 namespace cell_world {
     struct Location : json_cpp::Json_object {
         Location();
-        Location(float x, float y);
-        float x{}, y{};
+        Location(float x, float y, float z =0);
+        float x{}, y{}, z{};
         bool operator==(const Location &) const;
         bool operator!=(const Location &) const;
         Location operator+=(const Location &);
@@ -30,6 +30,7 @@ namespace cell_world {
         Json_object_members({
             Add_member(x);
             Add_member(y);
+            Add_optional_member(z);
         })
     };
 

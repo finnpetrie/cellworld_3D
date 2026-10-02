@@ -11,7 +11,7 @@ namespace cell_world{
     private:
         std::vector<int> _coordinate_index;
         Coordinates _base;
-        int _columns, _rows;
+        int _columns, _rows, _depth;
         int _index(const Coordinates &) const;
     };
 }

@@ -3,7 +3,7 @@
 
 namespace cell_world{
     bool Location::operator==(const Location &l) const {
-        return l.x == x && l.y == y;
+        return l.x == x && l.y == y && l.z == z;
     }
 
     bool Location::operator!=(const Location &l) const {
@@ -13,31 +13,32 @@ namespace cell_world{
     Location Location::operator+=(const Location &l) {
         x+=l.x;
         y+=l.y;
+        z += l.z;
         return *this;
     }
 
     Location Location::operator+(const Location &l) const {
-        return {x+l.x,y+l.y};
+        return {x+l.x,y+l.y, z + l.z};
     }
 
     Location Location::operator-(const Location &l) const {
-        return {x-l.x,y-l.y};
+        return {x-l.x,y-l.y, z - l.z};
     }
 
     Location Location::operator-() const {
-        return {-x,-y};
+        return {-x,-y, -z};
     }
 
     Location Location::operator*(float m) const {
-        return {x*m, y*m};
+        return {x*m, y*m, z*m};
     }
 
     Location Location::operator/(float d) const {
-        return {x/d, y/d};
+        return {x/d, y/d, z/d};
     }
 
     float Location::mod() const {
-        return sqrt(y*y + x*x);
+        return sqrt(y*y + x*x + z*z);
     }
 
     float Location::dist(const Location &l) const {
@@ -51,15 +52,15 @@ namespace cell_world{
     }
 
     float Location::dist() const {
-        return sqrt(x * x + y * y);
+        return sqrt(x * x + y*y + z*z);
     }
 
     float Location::manhattan(const Location &l) const {
-        return abs(l.x-x) + abs(l.y-y);
+        return abs(l.x-x) + abs(l.y-y) +abs(l.z-z);
     }
 
-    Location::Location(float x, float y) :
-            x(x), y(y){
+    Location::Location(float x, float y, float z) :
+            x(x), y(y), z(z){
     }
 
     Location::Location() = default;
@@ -93,7 +94,7 @@ namespace cell_world{
     }
 
     Location Location::operator*(const Location & other) const {
-        return {x*other.x, y*other.y};
+        return {x*other.x, y*other.y, z*other.z};
     }
 
     Location Location::orthogonal(const Location &line_start, const Location &line_ends) const {

@@ -6,8 +6,8 @@
 namespace cell_world {
     struct Coordinates : json_cpp::Json_object{
         Coordinates ();
-        Coordinates (int x, int y);
-        int x{},y{};
+        Coordinates (int x, int y, int z =0);
+        int x{},y{}, z{};
         bool is_origin() const;
         int rotation() const;
         bool operator ==(const Coordinates &) const;
@@ -20,6 +20,7 @@ namespace cell_world {
         Json_object_members({
             Add_member(x);
             Add_member(y);
+            Add_optional_member(z);
         })
     };
 

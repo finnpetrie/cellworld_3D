@@ -1,0 +1,122 @@
+2026-10-02T16:58:44 ACTION: Build NpfQTJ2Y9R started
+2026-10-02T16:58:44 ACTION: Creating /home/finnj/cellworld/cellworld_3D/git-dependencies folder
+2026-10-02T16:58:44 ACTION: Creating dependency cmake wrapper
+2026-10-02T16:58:44 ACTION: git clone --depth=1 https://github.com/cellworld/dependency_json-cpp /home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_json-cpp
+2026-10-02T16:58:44 RESULT: 0
+2026-10-02T16:58:44 ERROR: Cloning into '/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_json-cpp'...
+
+2026-10-02T16:58:44 ACTION: Removing git connection
+2026-10-02T16:58:44 ACTION: /usr/bin/cmake
+                    /home/finnj/cellworld/cellworld_3D/build/git-dependencies
+                    -DDEPENDENCIES_BUILD_NUMBER=NpfQTJ2Y9R
+                    -DDEPENDENCIES_LOG_FILE='/home/finnj/cellworld/cellworld_3D/build/git-dependencies.log'
+                    -DBUILD_AS_DEPENDENCY=TRUE
+                    -DDEPENDENCIES_DESTINATION='/home/finnj/cellworld/cellworld_3D/build/git-dependencies'
+                    -DDEPENDENCIES_FOLDER='/home/finnj/cellworld/cellworld_3D/git-dependencies'
+                    --no-warn-unused-cli
+                    -DCMAKE_BUILD_TYPE=
+                    -Wno-dev
+                    -DCATCH_TESTS=DISABLED
+                    -DCONNECT_ALL_DEPENDENCIES=OFF
+                    -DDEPENDENCY='dependency_json-cpp'
+                    
+2026-10-02T16:58:47 ACTION: git clone --depth=1 https://github.com/cellworld/dependency_catch /home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_catch
+2026-10-02T16:58:47 RESULT: 0
+2026-10-02T16:58:47 ERROR: Cloning into '/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_catch'...
+
+2026-10-02T16:58:47 ACTION: Removing git connection
+2026-10-02T16:58:47 ACTION: git clone --depth=1 https://github.com/cellworld/dependency_date /home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_date
+2026-10-02T16:58:48 RESULT: 0
+2026-10-02T16:58:48 ERROR: Cloning into '/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_date'...
+
+2026-10-02T16:58:48 ACTION: Removing git connection
+2026-10-02T16:58:48 RESULT: 0
+2026-10-02T16:58:48 RESULT: Not searching for unused variables given on the command line.
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GIT: /usr/lib/git-core/git (found version "2.43.0")
+-- Configuring done (3.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/finnj/cellworld/cellworld_3D/build/git-dependencies/dependency_json-cpp
+
+2026-10-02T16:58:48 ERROR: Cloning into '/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_catch'...
+
+Cloning into '/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_date'...
+
+
+2026-10-02T16:58:48 ACTION: /usr/bin/cmake --build /home/finnj/cellworld/cellworld_3D/build/git-dependencies/dependency_json-cpp --target all -j
+2026-10-02T16:58:49 RESULT: 0
+2026-10-02T16:58:49 RESULT: [ 33%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_util.cpp.o
+[ 33%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_date.cpp.o
+[ 55%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_base64.cpp.o
+[ 55%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_builder.cpp.o
+[ 77%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_object.cpp.o
+[ 77%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_base.cpp.o
+[ 77%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_buffer.cpp.o
+[ 88%] Building CXX object build/CMakeFiles/json-cpp.dir/src/json_dictionary.cpp.o
+[100%] Linking CXX static library libjson-cpp.a
+[100%] Built target json-cpp
+
+2026-10-02T16:58:49 ERROR: /home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_json-cpp/src/json_date.cpp: In function ‘std::string json_cpp::exec(const char*)’:
+/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_json-cpp/src/json_date.cpp:61:52: warning: ignoring attributes on template argument ‘int (*)(FILE*)’ [-Wignored-attributes]
+   61 |             std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose)
+2026-10-02T16:58:49 ERROR: 
+      |                                                    ^
+
+2026-10-02T16:58:49 ACTION: Importing json-cpp from Json-cpp
+2026-10-02T16:58:49 ACTION: git clone --depth=1 https://github.com/cellworld/dependency_requests /home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_requests
+2026-10-02T16:58:49 RESULT: 0
+2026-10-02T16:58:49 ERROR: Cloning into '/home/finnj/cellworld/cellworld_3D/git-dependencies/dependency_requests'...
+
+2026-10-02T16:58:49 ACTION: Removing git connection
+2026-10-02T16:58:49 ACTION: /usr/bin/cmake
+                    /home/finnj/cellworld/cellworld_3D/build/git-dependencies
+                    -DDEPENDENCIES_BUILD_NUMBER=NpfQTJ2Y9R
+                    -DDEPENDENCIES_LOG_FILE='/home/finnj/cellworld/cellworld_3D/build/git-dependencies.log'
+                    -DBUILD_AS_DEPENDENCY=TRUE
+                    -DDEPENDENCIES_DESTINATION='/home/finnj/cellworld/cellworld_3D/build/git-dependencies'
+                    -DDEPENDENCIES_FOLDER='/home/finnj/cellworld/cellworld_3D/git-dependencies'
+                    --no-warn-unused-cli
+                    -DCMAKE_BUILD_TYPE=
+                    -Wno-dev
+                    -DCATCH_TESTS=DISABLED
+                    -DCONNECT_ALL_DEPENDENCIES=OFF
+                    -DDEPENDENCY='dependency_requests'
+                    
+2026-10-02T16:58:53 RESULT: 0
+2026-10-02T16:58:53 RESULT: Not searching for unused variables given on the command line.
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  
+-- Configuring done (4.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/finnj/cellworld/cellworld_3D/build/git-dependencies/dependency_requests
+
+2026-10-02T16:58:53 ACTION: /usr/bin/cmake --build /home/finnj/cellworld/cellworld_3D/build/git-dependencies/dependency_requests --target all -j
+2026-10-02T16:58:54 RESULT: 0
+2026-10-02T16:58:54 RESULT: [ 66%] Building CXX object build/CMakeFiles/requests.dir/src/response.cpp.o
+[ 66%] Building CXX object build/CMakeFiles/requests.dir/src/request.cpp.o
+[100%] Linking CXX static library librequests.a
+[100%] Built target requests
+
+2026-10-02T16:58:54 ACTION: Importing requests from Requests

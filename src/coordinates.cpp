@@ -1,14 +1,14 @@
 #include <cell_world/coordinates.h>
 
 namespace cell_world {
-    Coordinates::Coordinates(int x, int y):
-            x(x),y(y){;
+    Coordinates::Coordinates(int x, int y, int z):
+            x(x),y(y), z(z){;
     }
 
     Coordinates::Coordinates() = default;
 
     bool Coordinates::operator ==(const Coordinates &c) const {
-        return c.x==x && c.y == y;
+        return c.x==x && c.y == y && c.z ==z;
     }
 
     bool Coordinates::operator !=(const Coordinates &c) const {
@@ -16,23 +16,23 @@ namespace cell_world {
     }
 
     Coordinates Coordinates::operator +=(const Coordinates &c) {
-        return { (x += c.x), (y += c.y) };
+        return { (x += c.x), (y += c.y), (z +=c.z)};
     }
 
     Coordinates Coordinates::operator +(const Coordinates &c) const{
-        return { (c.x + x), (c.y + y) };
+        return { (c.x + x), (c.y + y), (c.z + z) };
     }
 
     Coordinates Coordinates::operator -(const Coordinates &c) const{
-        return { (x - c.x), (y - c.y) };
+        return { (x - c.x), (y - c.y), (z - c.z) };
     }
 
     Coordinates Coordinates::operator -() const{
-        return { (-x), (-y) };
+        return { (-x), (-y) ,(-z)};
     }
 
     bool Coordinates::is_origin() const {
-        return x==0 && y==0;
+        return x==0 && y==0 && z == 0;
     }
 
     int Coordinates::rotation() const {
@@ -40,6 +40,6 @@ namespace cell_world {
     }
 
     unsigned int Coordinates::manhattan(const Coordinates &c) const {
-        return abs(c.x-x) + abs(c.y-y);
+        return abs(c.x-x) + abs(c.y-y) + abs(c.z-z);
     }
 }

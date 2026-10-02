@@ -3,6 +3,7 @@
 #include <json_cpp.h>
 #include <iostream>
 #include <cinttypes>
+#include <unordered_map>
 #include <string>
 #include <vector>
 
